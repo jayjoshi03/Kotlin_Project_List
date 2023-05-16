@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <com.google.android.material.appbar.AppBarLayout
+       android:id="@+id/top_bar"
+       android:fitsSystemWindows="true"
+       style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+      <com.google.android.material.appbar.MaterialToolbar
+          android:id="@+id/topAppBar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          app:title="@string/page_title"
+          style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+          />
+
+   </com.google.android.material.appbar.AppBarLayout>
+
+   <ProgressBar
+       android:layout_centerInParent="true"
+       android:id="@+id/loading"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"/>
+
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_below="@+id/top_bar"
+       android:id="@+id/recycler_view"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+
+</RelativeLayout>
